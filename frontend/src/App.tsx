@@ -1,9 +1,13 @@
+import Navbar from "./components/layout/Navbar";
+import Contact from "./pages/Contact/Contact";
+import Footer from "./components/layout/Footer";
+
 export default function App() {
   return (
-    <div className="min-h-screen bg-red-500 flex items-center justify-center">
-      <h1 className="text-white text-4xl font-bold">
-        Tailwind Working 🚀
-      </h1>
+    <div className="page">
+      <Navbar />
+      <Contact />
+      <Footer />
     </div>
   );
 }
