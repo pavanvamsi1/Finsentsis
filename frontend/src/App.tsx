@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Login from "./pages/Auth/Login";
 import Signup from "./pages/Auth/Signup";
@@ -41,3 +42,18 @@ function App() {
 }
 
 export default App;
+=======
+import Navbar from "./components/layout/Navbar";
+import Contact from "./pages/Contact/Contact";
+import Footer from "./components/layout/Footer";
+
+export default function App() {
+  return (
+    <div className="page">
+      <Navbar />
+      <Contact />
+      <Footer />
+    </div>
+  );
+}
+>>>>>>> main
