@@ -4,7 +4,7 @@ import AuthLayout from "../../components/auth/AuthLayout";
 import AuthTabs from "../../components/auth/AuthTabs";
 import AuthForm from "../../components/auth/AuthForm";
 
-const Signup = () => {
+const Requestademo = () => {
   const navigate = useNavigate();
 
   const [company, setCompany] = useState("");
@@ -33,7 +33,7 @@ const Signup = () => {
     <AuthLayout
       badge="Create your Finsentsis account"
       title="Sign up account"
-      subtitle="Enter your data to create your account"
+      subtitle=""
       bottomText="Already have account?"
       bottomLink="/login"
       bottomLinkText="Log In"
@@ -118,4 +118,4 @@ const Signup = () => {
   );
 };
 
-export default Signup;
+export default Requestademo;
