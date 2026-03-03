@@ -2,7 +2,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import Home from "./pages/Home/Home";
 import Login from "./pages/Auth/Login";
-import Signup from "./pages/Auth/Signup";
+import Requestademo from "./pages/Auth/Requestademo";
 import Pricing from "./pages/Pricing/Pricing";
 import Team from "./pages/Team/Team";
 
@@ -19,7 +19,7 @@ function App() {
         {/* Public Routes */}
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />
-        <Route path="/signup" element={<Signup />} />
+        <Route path="/Requestademo" element={<Requestademo />} />
         <Route path="/pricing" element={<Pricing />} />
         <Route path="/team" element={<Team />} />
 
