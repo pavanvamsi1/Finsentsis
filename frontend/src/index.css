@@ -1,7 +1,9 @@
-@tailwind base;
+/*@tailwind base;
 @tailwind components;
+develop
+@tailwind utilities;*/
 @tailwind utilities;
-
+ main
 .auth-bg{
 min-height:100vh;
 display:flex;
@@ -128,6 +130,8 @@ margin:0 auto 14px;display:flex;align-items:center;justify-content:center;
 .social-btn img[alt="Google"] {
   width: 50px;
   height: 50px;
+ develop
+}
 }
 /* ================= BUTTON CURSOR FIX ================= */
 
@@ -152,3 +156,4 @@ button:disabled {
   cursor: not-allowed;
   opacity: 0.6;
 }
+main
