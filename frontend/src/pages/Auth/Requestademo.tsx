@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import AuthLayout from "../../components/auth/AuthLayout";
 import AuthTabs from "../../components/auth/AuthTabs";
 import AuthForm from "../../components/auth/AuthForm";
+import { requestDemoAPI } from "../../library/api";
 
 const Requestademo = () => {
   const navigate = useNavigate();
@@ -12,7 +13,7 @@ const Requestademo = () => {
   const [country, setCountry] = useState("");
   const [accepted, setAccepted] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
     if (!accepted) {
@@ -20,7 +21,18 @@ const Requestademo = () => {
       return;
     }
 
-    navigate("/login");
+    try {
+      await requestDemoAPI({
+        company,
+        email,
+        country,
+      });
+
+      navigate("/login");
+
+    } catch {
+      alert("Demo request failed");
+    }
   };
 
   return (
