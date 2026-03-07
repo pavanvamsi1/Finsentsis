@@ -7,6 +7,8 @@ import Requestademo from "./pages/Auth/Requestademo";
 import Pricing from "./pages/Pricing/Pricing";
 import Team from "./pages/Team/Team";
 import Contact from "./pages/contact/Contact";
+import Features from "../pages/Features/Features";
+
 
 import ProtectedRoute from "./components/auth/ProtectedRoute";
 
@@ -26,6 +28,8 @@ function App() {
           <Route path="/pricing" element={<Pricing />} />
           <Route path="/team" element={<Team />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/features" element={<Features />} />
+          
 
           {/* Protected Routes */}
           <Route
