@@ -35,7 +35,7 @@ export function FeatureCard({ feature, index }: FeatureCardProps) {
       ref={ref}
       className="
       grid grid-cols-[50%_50%]
-      h-[552px]
+      h-[545px]
       border-2 border-[#4B4B4B]
       rounded-[10px]
       bg-[linear-gradient(253.41deg,#323232_38.52%,#080808_99.15%)]
