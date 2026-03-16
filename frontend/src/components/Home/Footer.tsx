@@ -101,8 +101,125 @@ export default function Footer() {
 
       <style>{`
 
-.footer { background: #131313; border-top: 1px solid rgba(255,255,255,0.06); padding: 52px 48px 28px; } .footer-top { display: grid; grid-template-columns: 1.4fr 1fr 1fr 1fr; gap: 48px; margin-bottom: 48px; } .footer-brand-logo { display: flex; align-items: center; gap: 8px; font-family: 'Syne', sans-serif; font-weight: 700; font-size: 15px; color: #fff; margin-bottom: 18px; } .footer-logo-img{ width:30px; height:30px; object-fit:contain; } .footer-newsletter-label { font-size: 16px; font-weight: 700; color: #fff; font-family: 'Syne', sans-serif; margin-bottom: 6px; } .footer-newsletter-sub { font-size: 12.5px; color: rgba(255,255,255,0.38); line-height: 1.6; margin-bottom: 16px; } .footer-input-row { display: flex; align-items: center; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 999px; overflow: hidden; padding: 4px 4px 4px 16px; } .footer-input { flex: 1; background: transparent; border: none; outline: none; font-size: 13px; color: #fff; font-family: 'DM Sans', sans-serif; } .footer-input::placeholder { color: rgba(255,255,255,0.28); } .footer-input-btn { width: 32px; height: 32px; border-radius: 50%; background: #9AFF2E; border: none; cursor: pointer; display: flex; align-items: center; justify-content: center; flex-shrink: 0; transition: opacity 0.2s; } .footer-input-btn:hover { opacity: 0.85; } .footer-col-title { font-size: 13px; font-weight: 600; color: #ffff; font-family: 'inter', sans-serif; margin-bottom: 16px; } .footer-links { list-style: none; display: flex; flex-direction: column; gap: 10px; } .footer-links a { font-size: 13px; color: rgba(255,255,255,0.42); text-decoration: none; transition: color 0.2s; } .footer-links a:hover { color: #ffff; } .footer-bottom { border-top: 1px solid rgba(255,255,255,0.06); padding-top: 20px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; } .footer-copy { font-size: 11.5px; color: rgba(255,255,255,0.25); } .footer-socials{ display:flex; align-items:center; gap:12px; } .footer-social-icon{ width:36px; height:36px; display:flex; align-items:center; justify-content:center; border-radius:6px; background:#121212; border:1px solid rgba(255,255,255,0.06); transition:all .25s ease; cursor:pointer; } .footer-social-icon svg{ width:20px; height:20px; color:#9AFF2E; } .footer-social-icon svg path{ fill:#9AFF2E; } .footer-social-icon svg rect, .footer-social-icon svg circle{ stroke:#9AFF2E; fill:none; } .footer-social-icon:hover{ background:#1a1a1a; box-shadow: 0 0 10px rgba(154,255,46,0.35); }
+ /* ── Footer ── */
+        .footer {
+          background: #131313;
+          border-top: 1px solid rgba(255,255,255,0.06);
+          padding: 52px 48px 28px;
+        }
+        .footer-top {
+          display: grid;
+          grid-template-columns: 1.4fr 1fr 1fr 1fr;
+          gap: 48px; margin-bottom: 48px;
+        }
+        .footer-brand-logo {
+          display: flex; align-items: center; gap: 8px;
+          font-family: 'Syne', sans-serif; font-weight: 700;
+          font-size: 15px; color: #fff; margin-bottom: 18px;
+        }
+        .footer-logo-img{
+  width:30px;
+  height:30px;
+  object-fit:contain;
+}
+        .footer-newsletter-label {
+          font-size: 16px; font-weight: 700; color: #fff;
+          font-family: 'Syne', sans-serif; margin-bottom: 6px;
+        }
+        .footer-newsletter-sub {
+          font-size: 12.5px; color: rgba(255,255,255,0.38);
+          line-height: 1.6; margin-bottom: 16px;
+        }
+        .footer-input-row {
+          display: flex; align-items: center;
+          background: rgba(255,255,255,0.05);
+          border: 1px solid rgba(255,255,255,0.1);
+          border-radius: 999px; overflow: hidden;
+          padding: 4px 4px 4px 16px;
+        }
+        .footer-input {
+          flex: 1; background: transparent; border: none; outline: none;
+          font-size: 13px; color: #fff;
+          font-family: 'DM Sans', sans-serif;
+        }
+        .footer-input::placeholder { color: rgba(255,255,255,0.28); }
+        .footer-input-btn {
+          width: 32px; height: 32px; border-radius: 50%;
+          background: #9AFF2E; border: none; cursor: pointer;
+          display: flex; align-items: center; justify-content: center;
+          flex-shrink: 0; transition: opacity 0.2s;
+        }
+        .footer-input-btn:hover { opacity: 0.85; }
+        .footer-col-title {
+          font-size: 13px; font-weight: 600; color: #ffff;
+          font-family: 'inter', sans-serif; margin-bottom: 16px;
+        }
+        .footer-links { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+        .footer-links a {
+          font-size: 13px; color: rgba(255,255,255,0.42);
+          text-decoration: none; transition: color 0.2s;
+        }
+        .footer-links a:hover { color: #ffff; }
+        .footer-bottom {
+          border-top: 1px solid rgba(255,255,255,0.06);
+          padding-top: 20px;
+          display: flex; align-items: center; justify-content: space-between;
+          flex-wrap: wrap; gap: 12px;
+        }
+        .footer-copy { font-size: 11.5px; color: rgba(255,255,255,0.25); }
+        .footer-socials{
+  display:flex;
+  align-items:center;
+  gap:12px;
+}
 
+.footer-social-icon{
+  width:36px;
+  height:36px;
+  
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  border-radius:6px;
+
+  background:#121212;
+
+  border:1px solid rgba(255,255,255,0.06);
+
+  transition:all .25s ease;
+  cursor:pointer;
+}
+
+.footer-social-icon svg{
+  width:20px;
+  height:20px;
+
+  color:#9AFF2E;
+}
+
+.footer-social-icon svg path{
+  fill:#9AFF2E;
+}
+
+.footer-social-icon svg rect,
+.footer-social-icon svg circle{
+  stroke:#9AFF2E;
+  fill:none;
+}
+
+.footer-social-icon:hover{
+  background:#1a1a1a;
+
+  box-shadow:
+    0 0 10px rgba(154,255,46,0.35);
+}
+
+/* ── Scrollbar ── */
+        ::-webkit-scrollbar { width: 4px; }
+        ::-webkit-scrollbar-track { background: #0d0d0d; }
+        ::-webkit-scrollbar-thumb { background: #9AFF2E; border-radius: 2px; }
 `}</style>
     </>
   );
