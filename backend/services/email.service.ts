@@ -9,15 +9,27 @@ export const sendContactConfirmation = async (
     email: string,
     name: string
 ) => {
-    const html = `<div style="font-family:Arial,sans-serif;font-size:14px;color:#000;">
-Hi ${name},<br><br>
-Thank you for contacting us.<br>
-Our team will get back to you shortly.<br><br>
-Regards,<br>
-Finsensis Team
-</div>`;
+    const html = `
+  <table width="100%" cellpadding="0" cellspacing="0" style="font-family:Arial,sans-serif;">
+    <tr>
+      <td>
+        <p style="margin:0;">Hi ${name},</p>
+        <br/>
+        <p style="margin:0;">Thank you for contacting us.</p>
+        <p style="margin:0;">Our team will get back to you shortly.</p>
+        <br/>
+        <p style="margin:0;">Regards,</p>
+        <p style="margin:0;">Finsensis Team</p>
+      </td>
+    </tr>
+  </table>
+  `;
 
-    await sendEmail(email, "Contact Confirmation", html);
+    await sendEmail(
+        email,
+        `Contact Confirmation - ${Date.now()}`,
+        html
+    );
 };
 
 export const sendDemoNotification = async (data: any) => {
