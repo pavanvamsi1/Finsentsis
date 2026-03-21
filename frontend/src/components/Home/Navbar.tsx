@@ -53,7 +53,7 @@ const Navbar: React.FC = () => {
                 relative text-sm font-medium transition duration-300
                 ${isActive
   ? "text-[#9AFF2E] drop-shadow-[0_0_8px_#9AFF2E] drop-shadow-[0_0_16px_#9AFF2E]"
-  : "text-white/60 hover:text-white"}
+  :  "text-[#FFFFFF] hover:text-[#FFFFFF]"}
               `}
             >
               {item.name}
@@ -67,18 +67,21 @@ const Navbar: React.FC = () => {
 
     {/* RIGHT: CTA */}
     <div className="hidden md:flex z-10">
-      <button className="
-        px-7 py-3
-        rounded-full
-        bg-black/50
-        backdrop-blur-xl
-        border border-white/10
-        text-white text-sm font-medium
-        hover:bg-white/10 transition
-      ">
-        Join our early access ↗︎
-      </button>
-    </div>
+  <Link
+    to="/requestademo"
+    className="
+      px-7 py-3
+      rounded-full
+      bg-black/50
+      backdrop-blur-xl
+      border border-white/10
+      text-[#FFFFFF]  text-sm font-medium
+      hover:bg-white/10 transition
+    "
+  >
+    Join our early access ↗︎
+  </Link>
+</div>
 
   </div>
 </header>
