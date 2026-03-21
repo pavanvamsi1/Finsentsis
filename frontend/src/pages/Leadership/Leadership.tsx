@@ -3,13 +3,12 @@ import TeamGrid from "../../components/Leadership/TeamGrid";
 import type { TeamMember } from "../../components/Leadership/TeamCard";
 import Footer from "../../components/Home/Footer";
 import Navbar from "../../components/Home/Navbar";
+import glowLine from "../../assets/glowline.png";
 
 import ushodharImg from "../../assets/Leadership/ushodhar.png";
 import vidhiImg from "../../assets/leadership/vidhi.png";
 import estherImg from "../../assets/leadership/esther.png";
 import karishmaImg from "../../assets/leadership/karishma.png";
-
-
 
 /* ─── TEAM DATA ───────────────── */
 
@@ -17,7 +16,7 @@ const TEAM_MEMBERS: TeamMember[] = [
   {
     name: "Ushodhar Raju",
     title: "Founder & CEO",
-    subtitle: "Leads product vision and strategy",
+    subtitle: "Visionary leader driving strategy, innovation, and global growth for Finsentsis OS.",
     description:
       "Leads product vision and enterprise strategy, building AI-powered governance systems that simplify complex regulatory environments. He focuses on scalable architecture, strategic partnerships, and long-term institutional impact.",
     image: ushodharImg,
@@ -25,8 +24,8 @@ const TEAM_MEMBERS: TeamMember[] = [
   },
   {
     name: "Vidhi Vallechha",
-    title: "Business Development",
-    subtitle: "Drives growth and ecosystem collaborations",
+    title: "Director – Strategy & Client Relations",
+    subtitle: "Driving communication, partnerships, and growth initiatives.",
     description:
       "Plays a key role in stakeholder engagement and business development at Finsentsis. With strong communication and relationship-building skills, she supports client acquisition, ecosystem collaborations, and strategic expansion efforts.",
     image: vidhiImg,
@@ -34,17 +33,17 @@ const TEAM_MEMBERS: TeamMember[] = [
   },
   {
     name: "Esther Rosalin Narmeta",
-    title: "Head of HR",
-    subtitle: "People & Organizational Development",
+    title: "Head of Human Resources",
+    subtitle: "People, Culture & Organizational Development",
     description:
-      "Leads all HR functions at Finsentsis, overseeing talent acquisition, employee engagement, and organizational structure. Ensures strong internal processes, team alignment, and a performance-driven culture that supports the company’s long-term growth and execution excellence..",
+      "Leads all HR functions at Finsentsis, overseeing talent acquisition, employee engagement, and organizational structure. Ensures strong internal processes, team alignment, and a performance-driven culture that supports the company’s long-term growth and execution excellence.",
     image: estherImg,
     linkedIn: "https://linkedin.com",
   },
   {
     name: "Karishma Shaik",
-    title: "Client Success & Growth",
-    subtitle: "Client-Focused Strategy Expert",
+    title: "Head of Business Development",
+    subtitle: "Client Outreach & Strategic Growth",
     description:
       "Leads client acquisition and business outreach initiatives at Finsentsis. Manages LinkedIn engagement, partnership conversations, and meeting coordination with prospective clients. Plays a key role in expanding market presence and building strong business relationships.",
     image: karishmaImg,
@@ -52,61 +51,8 @@ const TEAM_MEMBERS: TeamMember[] = [
   },
 ];
 
-
-  const OurStory: React.FC = () => (
-  <section
-    style={{
-      maxWidth: "760px",
-      margin: "0 auto",
-      padding: "5rem 1.5rem",
-      textAlign: "center",
-    }}
-  >
-    <h2
-      style={{
-        fontSize: "clamp(1.75rem, 4vw, 2.75rem)",
-        fontWeight: 700,
-        marginBottom: "1.5rem",
-      }}
-    >
-      Our Story
-    </h2>
-
-    <p
-      style={{
-        color: "rgba(255,255,255,0.65)",
-        lineHeight: "1.8",
-        marginBottom: "1rem",
-      }}
-    >
-      Finsentsis OS was founded with a mission to make regulatory compliance
-      intelligent, autonomous, and global. Traditional compliance processes are
-      slow, manual, and fragmented across tools and geographies.
-    </p>
-
-    <p
-      style={{
-        color: "rgba(255,255,255,0.65)",
-        lineHeight: "1.8",
-      }}
-    >
-      Our team combines deep compliance expertise with cutting-edge technology
-      to deliver solutions that actually work. We’re working with leading
-      enterprises to simplify compliance, reduce costs, and minimize risk.
-    </p>
-  </section>
-
-
-
-
-);
-
-
-/* ─── PAGE ───────────────── */
-
 const TeamPage: React.FC = () => {
   return (
-    
     <div
       style={{
         minHeight: "100vh",
@@ -118,66 +64,361 @@ const TeamPage: React.FC = () => {
       }}
     >
 
-      <Navbar/>
+      {/* ✅ ONE SINGLE SECTION */}
+      <section className="main-section">
 
+  <Navbar />
 
-      {/* CONTENT */}
-      <div style={{ position: "relative", zIndex: 2 }}>
-        
-        {/* HEADER */}
-        <header style={{ textAlign: "center", padding: "6rem 1.5rem 3rem" }}>
-          <p
-            style={{
-              fontSize: "0.78rem",
-              letterSpacing: "0.18em",
-              textTransform: "uppercase",
-              color: "#9AFF2E",
-              marginBottom: "1rem",
-            }}
-          >
-            LEADERSHIP
-          </p>
+  {/* CONTENT */}
+  <div className="relative z-20">
 
-          <h1
-            style={{
-              fontSize: "clamp(2rem, 5vw, 3.25rem)",
-              fontWeight: 700,
-              lineHeight: 1.15,
-              marginBottom: "1rem",
-            }}
-          >
-            Meet the Innovators Behind Finsentsis OS
-          </h1>
+    {/* HEADER */}
+    <header className="text-center mt-[170px] pb-12">
 
-          <p
-            style={{
-              color: "rgba(255,255,255,0.65)",
-              maxWidth: "600px",
-              margin: "0 auto",
-              lineHeight: "1.7",
-            }}
-          >
-            Finsentsis OS is led by visionary leaders and compliance experts
-            dedicated to transforming how enterprises manage global regulatory obligations.
-          </p>
-        </header>
+  <h1 className="mx-auto max-w-[926px] text-[80px] font-medium leading-[0.96] text-white mb-[24px]">
+    Meet the Innovators Behind Finsentsis OS
+  </h1>
 
-        {/* TEAM */}
-        <TeamGrid members={TEAM_MEMBERS} />
+  <p className="mx-auto max-w-[770px] text-[20px] leading-[1.38] text-white/80">
+    Finsentsis OS is led by visionary leaders and compliance experts
+    dedicated to transforming how enterprises manage global regulatory obligations.
+  </p>
 
-    
+</header>
 
-       {/* OUR STORY */}
-       <OurStory />
+    {/* TEAM (with margin top like mt) */}
+    {/* ✅ CARDS ABOVE */}
+  <div className="relative z-10">
+    <TeamGrid members={TEAM_MEMBERS} />
+  </div>
 
+    {/* CTA */}
+    <section className="story-cta-section">
 
-     
+      {/* LEFT */}
+      <img src={glowLine} className="cta-glow-line glow-left glow-layer1" />
+      <img src={glowLine} className="cta-glow-line glow-left glow-layer2" />
+      <img src={glowLine} className="cta-glow-line glow-left glow-layer3" />
+      <img src={glowLine} className="cta-glow-line glow-left glow-layer4" />
+      <img src={glowLine} className="cta-glow-line glow-left glow-layer5" />
 
+      {/* RIGHT */}
+      <img src={glowLine} className="cta-glow-line glow-right glow-layer1" />
+      <img src={glowLine} className="cta-glow-line glow-right glow-layer2" />
+      <img src={glowLine} className="cta-glow-line glow-right glow-layer3" />
+      <img src={glowLine} className="cta-glow-line glow-right glow-layer4" />
+      <img src={glowLine} className="cta-glow-line glow-right glow-layer5" />
 
-        
-<Footer/>
+      <div className="relative z-20 max-w-[1355px] mx-auto text-center pt-[50px] pb-[120px]">
+
+        <h2 className="story-heading">
+          Our Story
+        </h2>
+
+        <p className="story-text">
+          Finsentsis OS was founded with a mission to make regulatory compliance intelligent, autonomous, and global. Traditional compliance processes are slow, manual, and fragmented across tools and geographies. Finsentsis OS eliminates this friction through an AI-powered governance engine that adapts to evolving laws and policies in real time.
+        </p>
+
+        <p className="story-subtext">
+          Our team combines deep compliance expertise with cutting-edge technology to deliver solutions that actually work.We’re <br/>
+          working with leading enterprises across financial services, healthcare, technology, and manufacturing to simplify compliance,<br/> 
+  reduce costs and minimize risk.
+        </p>
+
+        <h3 className="cta-heading">
+          Join Our  <br /> Mission
+        </h3>
+
+        <p className="cta-sub-large">
+          Help us transform how enterprises manage compliance globally. Explore career opportunities with Finsentsis OS.
+        </p>
+
+        <div className="cta-buttons">
+          <a href="#" className="btn-primary">Start free trial ↗</a>
+          <a href="/Requestademo" className="btn-secondary">Schedule Demo ↗</a>
+        </div>
 
       </div>
+    </section>
+
+  </div>
+</section>
+
+      <Footer />
+
+      {/* STYLES */}
+      <style>{`
+
+.main-section{
+  position:relative;
+  overflow:hidden;
+}
+.cta-section{
+  position:relative;
+  overflow:hidden;
+  
+  padding:40px 40px 160px;
+  text-align:center;
+  background:#0d0d0d;
+}
+
+.cta-content{
+  margin-top:180px;
+  position:relative;
+  z-index:1;
+}
+
+/* STORY HEADING */
+.story-heading {
+  font-family: 'Inter Display', sans-serif;
+  font-size: 80px;
+  font-weight: 500;
+  line-height: 1.38;
+  color: #ffffff;
+
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+
+/* STORY TEXT */
+.story-text {
+  font-family: 'Inter Display', sans-serif;
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 1.38;
+  color: #ffffff;
+
+  max-width: 1355px;
+  margin: 0 auto 48px;
+
+  text-align: center;
+}
+  
+
+/* STORY SUBTEXT */
+.story-subtext {
+  font-family: 'Inter Display', sans-serif;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 1.38;
+  color: #999999;
+
+  max-width: 1388px;
+  margin: 0 auto 180px;
+
+  text-align: center;
+  text-wrap: balance; 
+}
+
+
+
+/* glow images */
+.cta-glow-line{
+  position:absolute;
+  width:925px;
+
+  pointer-events:none;
+  mix-blend-mode:screen;
+  opacity:0.75;
+
+  transform:scaleX(1.3);
+
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    black 25%,
+    black 75%,
+    transparent 100%
+  );
+}
+
+.team-glow-wrapper{
+  position:absolute;
+  inset:0;
+  z-index:0;
+  pointer-events:none;
+}
+
+/* layer depth */
+
+.glow-layer1{
+  filter: blur(6px);
+  opacity:1;
+}
+
+.glow-layer2{
+  filter: blur(280px);
+  opacity:0.55;
+}
+
+.glow-layer3{
+  filter: blur(320px);
+  opacity:0.35;
+}
+
+.glow-layer4{
+  filter: blur(160px);
+  opacity:0.25;
+}
+
+.glow-layer5{
+  filter: blur(200px);
+  opacity:0.15;
+}
+
+
+/* LEFT beams */
+
+/* LEFT beams → CENTERED */
+.glow-left.glow-layer1 { top: 30%; left: -380px; transform: rotate(-2deg); }
+.glow-left.glow-layer2 { top: 35%; left: -340px; transform: rotate(-2deg); }
+.glow-left.glow-layer3 { top: 40%; left: -300px; transform: rotate(-2deg); }
+.glow-left.glow-layer4 { top: 45%; left: -260px; transform: rotate(-2deg); }
+.glow-left.glow-layer5 { top: 50%; left: -220px; transform: rotate(-2deg); }
+
+
+/* RIGHT beams */
+
+.glow-right.glow-layer1 { bottom:-120px; right:-380px; transform:rotate(-82deg) scaleX(-1); }
+.glow-right.glow-layer2 { bottom:-150px; right:-340px; transform:rotate(22deg) scaleX(-1); }
+.glow-right.glow-layer3 { bottom:-180px; right:-300px; transform:rotate(22deg) scaleX(-1); }
+.glow-right.glow-layer4 { bottom:-210px; right:-260px; transform:rotate(22deg) scaleX(-1); }
+.glow-right.glow-layer5 { bottom:-240px; right:-220px; transform:rotate(22deg) scaleX(-1); }
+
+
+
+/* gradient overlay to fade out glows at edges */
+.cta-section::before{
+  content:"";
+  position:absolute;
+  inset:0;
+
+  background:
+    linear-gradient(
+      to bottom,
+      rgba(13,13,13,0) 0%,
+      rgba(13,13,13,0.35) 40%,
+      rgba(13,13,13,0.75) 70%,
+      rgba(13,13,13,1) 100%
+    ),
+    linear-gradient(
+      to right,
+      rgba(13,13,13,0) 60%,
+      rgba(13,13,13,0.6) 85%,
+      rgba(13,13,13,1) 100%
+    );
+
+  pointer-events:none;
+}
+
+.cta-section::after{
+  content:"";
+  position:absolute;
+
+  right:-250px;
+  bottom:-250px;
+
+  width:520px;
+  height:520px;
+
+  background: radial-gradient(
+    circle,
+    rgba(154,255,46,0.35) 0%,
+    rgba(154,255,46,0.15) 40%,
+    transparent 75%
+  );
+
+  filter: blur(140px);
+  pointer-events:none;
+}
+
+.glow-soft{
+  opacity:0.35;
+  filter: blur(60px);
+}
+
+
+.cta-heading {
+  font-family: 'Syne', sans-serif;
+  font-size: clamp(44px, 8vw, 100px);
+  font-weight: 700; 
+  color: #fff;
+  line-height: 1.0; 
+  letter-spacing: -0.02em;
+  position: relative; 
+  z-index: 1; 
+  margin-bottom: 24px;
+}
+
+.cta-sub-large {
+  font-size: 20px;
+  line-height: 1.4;
+  color: #999999;
+
+  max-width: 773px;
+  margin: 0 auto 40px;
+
+  text-align: center;
+}
+
+.cta-buttons {
+  display: flex; 
+  align-items: center; 
+  justify-content: center;
+  gap: 12px; 
+  position: relative; 
+  z-index: 1; 
+  flex-wrap: wrap;
+  margin-bottom: 80px; 
+}
+
+.btn-primary {
+  display: inline-flex; 
+  align-items: center; 
+  gap: 6px;
+  padding: 12px 24px; 
+  border-radius: 999px;
+  background: #9AFF2E; 
+  color: #0a0a0a;
+  font-family: 'DM Sans', sans-serif; 
+  font-size: 14px; 
+  font-weight: 600;
+  border: none; 
+  cursor: pointer; 
+  text-decoration: none;
+  transition: opacity 0.2s, transform 0.2s;
+}
+
+.btn-primary:hover { 
+  opacity: 0.88; 
+  transform: translateY(-1px); 
+}
+
+.btn-secondary {
+  display: inline-flex; 
+  align-items: center; 
+  gap: 6px;
+  padding: 12px 24px; 
+  border-radius: 999px;
+  background: transparent; 
+  color: #fff;
+  font-family: 'DM Sans', sans-serif; 
+  font-size: 14px; 
+  font-weight: 500;
+  border: 1px solid rgba(255,255,255,0.18); 
+  cursor: pointer;
+  text-decoration: none; 
+  transition: border-color 0.2s, transform 0.2s;
+}
+
+.btn-secondary:hover { 
+  border-color: rgba(255,255,255,0.4); 
+  transform: translateY(-1px); 
+}
+
+`}</style>
+
     </div>
   );
 };
