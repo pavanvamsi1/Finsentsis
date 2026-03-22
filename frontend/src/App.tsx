@@ -9,6 +9,7 @@ import Leadership from "./pages/Leadership/Leadership";
 import Contact from "./pages/contact/Contact";
 import Features from "./pages/Features/Features";
 import Careers from "./pages/Careers/Careers";
+import Solution from "./pages/Solution/solution";
 
 
 import ProtectedRoute from "./components/auth/ProtectedRoute";
@@ -31,6 +32,7 @@ function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/features" element={<Features />} />
           <Route path="/careers" element={<Careers />} />
+          <Route path="/solution" element={<Solution />} />
           
 
           {/* Protected Routes */}
