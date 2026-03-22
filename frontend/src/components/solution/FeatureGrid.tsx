@@ -8,27 +8,32 @@ const features: Feature[] = [
   {
     id: 1,
     title: "Real-Time Regulatory Interpretation",
-    description: "AI & NLP technology tracks and analyzes global laws to ensure organizations always stay updated.",
+    description:
+      "AI & NLP technology tracks and analyzes global laws to ensure organizations always stay updated.",
   },
   {
     id: 2,
     title: "Policy-to-Task Conversion",
-    description: "Convert policies into real-time workflows via automation scripts, reducing human effort.",
+    description:
+      "Convert policies into real-time workflows via automation scripts, reducing human effort.",
   },
   {
     id: 3,
     title: "Continuous Compliance Monitoring",
-    description: "Automated monitoring and alerts ensure you never miss a regulatory change or deadline.",
+    description:
+      "Automated monitoring and alerts ensure you never miss a regulatory change or deadline.",
   },
   {
     id: 4,
     title: "Multi-Country Governance",
-    description: "Supports compliance frameworks across multiple countries and industries.",
+    description:
+      "Supports compliance frameworks across multiple countries and industries.",
   },
   {
     id: 5,
     title: "Audit-Ready Reporting",
-    description: "Auto-generates compliant, standardized reports for regulators and auditors on demand.",
+    description:
+      "Auto-generates compliant, standardized reports for regulators and auditors on demand.",
   },
 ];
 
@@ -56,8 +61,8 @@ export default function FeatureGrid() {
           </div>
         </div>
 
-        {/* BOTTOM ROW */}
-        <div className="row">
+        {/* 🔥 BOTTOM ROW (FIGMA EXACT) */}
+        <div className="row-bottom">
           <div className="card wide">
             <h3>{features[3].title}</h3>
             <p>{features[3].description}</p>
@@ -83,15 +88,15 @@ export default function FeatureGrid() {
           position: relative;
           background: linear-gradient(180deg, #0d0f0d, #060807);
           border: 1px solid #222;
-          border-radius: 18px;
-          padding: 28px;
+          border-radius: 20px;
+          padding: 32px;
           overflow: hidden;
         }
 
         .card h3 {
           font-size: 20px;
           font-weight: 500;
-          color: #fff;
+          color: #ffffff;
           margin-bottom: 10px;
         }
 
@@ -108,7 +113,7 @@ export default function FeatureGrid() {
           margin-bottom: 24px;
         }
 
-        /* ROWS */
+        /* MIDDLE ROW */
         .row {
           display: grid;
           grid-template-columns: 1fr 1fr;
@@ -116,17 +121,29 @@ export default function FeatureGrid() {
           margin-bottom: 24px;
         }
 
-        /* WIDE CARD */
-        .wide {
-          height: 320px;
+        /* 🔥 BOTTOM ROW (CUSTOM WIDTHS) */
+        .row-bottom {
+          display: grid;
+          grid-template-columns: 2.7fr 1fr; /* ≈ 1004px / 373px */
+          gap: 24px;
         }
 
-        /* SMALL CARD */
+        /* CARD HEIGHTS (FIGMA) */
+        .wide {
+          height: 434px;
+        }
+
         .small {
-          height: 320px;
+          height: 434px;
         }
 
         /* RESPONSIVE */
+        @media (max-width: 1024px) {
+          .row-bottom {
+            grid-template-columns: 1fr; /* stack */
+          }
+        }
+
         @media (max-width: 768px) {
           .row {
             grid-template-columns: 1fr;
