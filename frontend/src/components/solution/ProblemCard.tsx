@@ -1,3 +1,8 @@
+import num1 from "../../assets/solution/01.png";
+import num2 from "../../assets/solution/02.png";
+import num3 from "../../assets/solution/03.png";
+import num4 from "../../assets/solution/04.png";
+
 interface Problem {
   id: number;
   title: string;
@@ -27,6 +32,14 @@ const problems: Problem[] = [
   },
 ];
 
+/* ✅ Map IDs to images */
+const numberImages: Record<number, string> = {
+  1: num1,
+  2: num2,
+  3: num3,
+  4: num4,
+};
+
 export default function ProblemCard() {
   return (
     <>
@@ -39,49 +52,50 @@ export default function ProblemCard() {
               <span className="badge">Problem</span>
             </div>
 
-            <div className="number-box">
-              <div className="number">
-                {p.id.toString().padStart(2, "0")}
-              </div>
+            {/* ✅ Number Image */}
+            <div className={`number-box number-${p.id}`}>
+              <img
+                src={numberImages[p.id]}
+                alt={`number-${p.id}`}
+                className="number-img"
+              />
             </div>
           </div>
         ))}
       </div>
 
       <style>{`
-        .wrapper {
-          max-width: 1404px;
-          margin: 0 auto;
-          display: grid;
-          grid-template-columns: repeat(2, 1fr);
-          gap: 28px;
-        }
+      .wrapper {
+  max-width: 1404px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(2, 688px); /* exact */
+  gap: 28px;
+  justify-content: center;
+}
 
-        @media (max-width: 768px) {
-          .wrapper {
-            grid-template-columns: 1fr;
-          }
-        }
+    @media (max-width: 1400px) {
+  .wrapper {
+    grid-template-columns: 1fr;
+  }
 
-        .card {
-          position: relative;
-          width: 100%;
-          aspect-ratio: 688 / 491;
-          border-radius: 18px;
-          overflow: hidden;
-          border: 1.21px solid #3b3b3b;
+  .card {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 688 / 491;
+  }
+}
+     .card {
+  position: relative;
+  width: 688px;              /* ✅ exact */
+  height: 491px;             /* ✅ exact */
+  border-radius: 12px;       /* ✅ from Figma (12.08) */
+  overflow: hidden;
+  border: 1.21px solid #3B3B3B;
+  background: #1E1E1E;
+}
 
-          background:
-            radial-gradient(
-              390px 317px at 78% 72%,
-              rgba(135, 222, 43, 0.28) 0%,
-              rgba(135, 222, 43, 0.18) 30%,
-              rgba(135, 222, 43, 0.08) 55%,
-              rgba(135, 222, 43, 0.02) 70%,
-              transparent 85%
-            ),
-            linear-gradient(180deg, #0d0f0d 0%, #060807 100%);
-        }
+ 
 
         .content {
           position: relative;
@@ -90,18 +104,15 @@ export default function ProblemCard() {
           max-width: 621px;
         }
 
-        /* 🔥 TITLE (FIXED) */
         .card-title {
           font-family: "Inter Display", sans-serif;
           font-size: 36px;
           font-weight: 500;
           line-height: 1.06;
           color: #ffffff;
-
           margin-bottom: 12px;
         }
 
-        /* 🔥 DESCRIPTION */
         .card-desc {
           font-family: "Inter Display", sans-serif;
           font-size: 16px;
@@ -111,7 +122,6 @@ export default function ProblemCard() {
           margin-bottom: 18px;
         }
 
-        /* 🔥 BADGE */
         .badge {
           display: inline-block;
           font-size: 13px;
@@ -122,39 +132,48 @@ export default function ProblemCard() {
           color: #cfcfcf;
         }
 
-        /* 🔥 NUMBER CONTAINER (FIGMA LAYOUT) */
+        /* ✅ NUMBER FRAME */
         .number-box {
-          position: absolute;
-          width: 390px;
-          height: 317px;
-          bottom: 0;
-          right: 0;
+  position: absolute;
+  width: 390px;
+  height: 317px;
 
-          display: flex;
-          align-items: flex-end;
-          justify-content: flex-end;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
 
-          pointer-events: none;
-        }
+  pointer-events: none;
+}
 
-        /* 🔥 NUMBER */
-        .number {
-          font-size: 160px;
-          font-weight: 700;
-          line-height: 1;
+/* 01 */
+.number-1 {
+  bottom: -30px;
+  right: 20px;
+}
 
-          transform: translate(10%, 10%);
+/* 02 */
+.number-2 {
+  bottom: -30px;
+  right: 20px;
+}
 
-          background: linear-gradient(
-            180deg,
-            #EEFFDB 0%,
-            #87DE2B 55%,
-            rgba(22, 22, 22, 0) 100%
-          );
+/* 03 */
+.number-3 {
+  bottom: -40px;
+  right: 30px;
+}
 
-          -webkit-background-clip: text;
-          -webkit-text-fill-color: transparent;
+/* 04 */
+.number-4 {
+  bottom: -25px;
+  right: 15px;
+}
 
+        /* ✅ NUMBER IMAGE */
+        .number-img {
+          width: 100%;
+          height: 100%;
+          object-fit: contain;
           opacity: 0.95;
         }
       `}</style>

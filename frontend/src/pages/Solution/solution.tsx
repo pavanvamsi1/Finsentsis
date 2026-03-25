@@ -133,7 +133,7 @@ export default function SolutionPage() {
   font-size: 18px;                 /* slightly bigger */
   color: #FFFFFF;                  /* softer white like pic 1 */
   line-height: 1.8;                /* 🔥 more breathing space */
-  max-width: 900px;                /* wider → better wrapping */
+  max-width: 970px;                /* wider → better wrapping */
   margin: 40px auto 60px;
   text-align: center;
 }
@@ -249,13 +249,14 @@ export default function SolutionPage() {
 
 .cta-section {
   position: relative;
-  overflow: hidden;
-  padding: 140px 40px 200px;
+  overflow: visible;
+  padding: 60px 40px 200px;
 
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+
 
   text-align: center;
 }
@@ -264,7 +265,6 @@ export default function SolutionPage() {
 .cta-content {
   margin-top: 0; /* ✅ FIX */
   position: relative;
-  z-index: 2;
 }
 
 /* ========================= */
@@ -278,6 +278,8 @@ export default function SolutionPage() {
   pointer-events: none;
   mix-blend-mode: screen;
   opacity: 0.75;
+ z-index: 0;
+
 
   transform: scaleX(1.3);
 
@@ -301,11 +303,11 @@ export default function SolutionPage() {
 /* LEFT GLOW (FIXED) */
 /* ========================= */
 
-.glow-left.glow-layer1 { top: 10%; left: -380px; transform: rotate(-2deg); }
-.glow-left.glow-layer2 { top: 32%; left: -340px; transform: rotate(-2deg); }
-.glow-left.glow-layer3 { top: 34%; left: -300px; transform: rotate(-2deg); }
-.glow-left.glow-layer4 { top: 36%; left: -260px; transform: rotate(-2deg); }
-.glow-left.glow-layer5 { top: 38%; left: -220px; transform: rotate(-2deg); }
+.glow-left.glow-layer1 { top: -38%; left: -380px; transform: rotate(-2deg); }
+.glow-left.glow-layer2 { top: -36%; left: -340px; transform: rotate(-2deg); }
+.glow-left.glow-layer3 { top: -34%; left: -300px; transform: rotate(-2deg); }
+.glow-left.glow-layer4 { top: -32%; left: -260px; transform: rotate(-2deg); }
+.glow-left.glow-layer5 { top: -30%; left: -220px; transform: rotate(-2deg); }
 
 /* ========================= */
 /* RIGHT GLOW (FIXED) */
@@ -393,6 +395,11 @@ export default function SolutionPage() {
   color: #fff;
   font-size: 14px;
   text-decoration: none;
+}
+
+.footer {
+  position: relative;
+  z-index: 2;
 }
 
       `}</style>

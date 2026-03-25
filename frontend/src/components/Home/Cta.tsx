@@ -46,7 +46,8 @@ export default function CTA() {
 
 .cta-section{
   position:relative;
-  overflow:hidden;
+  overflow:visible;
+  z-index: 0;
   
   padding:40px 40px 160px;
   text-align:center;
@@ -63,6 +64,7 @@ export default function CTA() {
 .cta-glow-line{
   position:absolute;
   width:925px;
+  z-index:0;
 
   pointer-events:none;
   mix-blend-mode:screen;
@@ -132,6 +134,8 @@ export default function CTA() {
   position:absolute;
   inset:0;
 
+  
+
   background:
     linear-gradient(
       to bottom,
@@ -193,7 +197,7 @@ export default function CTA() {
   font-size: 14px; 
   color: rgba(255,255,255,0.45);
   line-height: 1.65; 
-  max-width: 340px;
+  max-width: 540px;
   margin: 0 auto 40px; 
   position: relative; 
   z-index: 1;
