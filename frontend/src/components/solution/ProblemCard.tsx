@@ -45,11 +45,13 @@ export default function ProblemCard() {
     <>
       <div className="wrapper">
         {problems.map((p) => (
-          <div key={p.id} className="card">
+          <div key={p.id} className="problem-card">
             <div className="content">
               <h3 className="card-title">{p.title}</h3>
               <p className="card-desc">{p.desc}</p>
-              <span className="badge">Problem</span>
+              <span className="badge">
+                <span className="badge-text">Problem</span>
+              </span>
             </div>
 
             {/* ✅ Number Image */}
@@ -85,24 +87,28 @@ export default function ProblemCard() {
     aspect-ratio: 688 / 491;
   }
 }
-     .card {
+     .problem-card {
   position: relative;
   width: 688px;              /* ✅ exact */
   height: 491px;             /* ✅ exact */
   border-radius: 12px;       /* ✅ from Figma (12.08) */
   overflow: hidden;
   border: 1.21px solid #3B3B3B;
-  background: #1E1E1E;
+  background-color: #1E1E1E;
+  
 }
 
  
 
-        .content {
-          position: relative;
-          z-index: 2;
-          padding: 32px;
-          max-width: 621px;
-        }
+    .content {
+  position: relative;
+  z-index: 2;
+  padding: 45px;
+
+  display: flex;          /* ✅ add */
+  flex-direction: column; /* ✅ add */
+  height: 100%;           /* ✅ add */
+}
 
         .card-title {
           font-family: "Inter Display", sans-serif;
@@ -111,32 +117,58 @@ export default function ProblemCard() {
           line-height: 1.06;
           color: #ffffff;
           margin-bottom: 12px;
+          width: 621px;
         }
 
         .card-desc {
           font-family: "Inter Display", sans-serif;
-          font-size: 16px;
+          font-size: 19px;
           font-weight: 400;
           line-height: 1.5;
-          color: #8a8a8a;
+          color: #7F7F7F;
           margin-bottom: 18px;
+          width: 596px;
         }
 
-        .badge {
-          display: inline-block;
-          font-size: 13px;
-          padding: 6px 14px;
-          border-radius: 999px;
-          background: rgba(255, 255, 255, 0.06);
-          border: 1px solid rgba(255, 255, 255, 0.08);
-          color: #cfcfcf;
-        }
+.badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  height: 41px;
+  padding: 0 20px;
+  margin-top: auto;
+  align-self: flex-start;
+
+  font-family: "Inter Display", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 150%;
+  color: #989898 , #eaeaea , #999999 ;
+
+  border-radius: 999px;
+
+  /* ✅ DARK subtle base */
+  background: linear-gradient(
+    180deg,
+    #47111111
+  );
+
+  /* ✅ softer border */
+  border: 1px solid rgba(255,255,255,0.12);
+
+  /* ✅ subtle inner highlight (top only) */
+  box-shadow:
+    inset 0 1px 1px rgba(255,255,255,0.08),
+    inset 0 -2px 4px rgba(0,0,0,0.7);
+
+  backdrop-filter: blur(4px);
+}
+
 
         /* ✅ NUMBER FRAME */
         .number-box {
   position: absolute;
-  width: 390px;
-  height: 317px;
 
   display: flex;
   align-items: flex-end;
@@ -147,26 +179,38 @@ export default function ProblemCard() {
 
 /* 01 */
 .number-1 {
-  bottom: -30px;
-  right: 20px;
+ width: 390px;
+  height: 317px;
+
+  bottom: -55px;
+  right: 30px;
 }
 
 /* 02 */
 .number-2 {
-  bottom: -30px;
-  right: 20px;
+ width: 485px;
+  height: 317px;
+
+  bottom: -55px;
+  right: 10px;
 }
 
 /* 03 */
 .number-3 {
-  bottom: -40px;
-  right: 30px;
+ width: 498px;
+  height: 317px;
+
+  bottom: -55px;
+  right: 10px;
 }
 
 /* 04 */
 .number-4 {
-  bottom: -25px;
-  right: 15px;
+ width: 515px;
+  height: 317px;
+
+  bottom: -55px;
+  right: 10px;
 }
 
         /* ✅ NUMBER IMAGE */
