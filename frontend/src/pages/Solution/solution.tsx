@@ -151,7 +151,7 @@ export default function SolutionPage() {
         /* SOLUTION SECTION */
         .solution-section {
           text-align: center;
-          padding: 80px 20px 100px;
+          padding: 50px 20px 100px;
         }
           .solution-pill {
   display: inline-block;
