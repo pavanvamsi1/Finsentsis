@@ -10,7 +10,13 @@ const About = () => {
       <section className="about-hero">
         
         <div className="hero-beam hero-beam-left" />
+        
 <div className="hero-beam hero-beam-right" />
+
+<div className="hero-glow hero-glow-left" />
+<div className="hero-glow hero-glow-right" />
+
+
 
         <div className="about-hero__inner">
           <Navbar />
@@ -43,71 +49,113 @@ const About = () => {
       <style>{`
         @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap");
 
-        .about-hero {
-          position: relative;
-          width: 100%;
-          min-height: 820px;
-          display: flex;
-          justify-content: center;
-          align-items: flex-start;
-          font-family: "Inter", sans-serif;
-          color: #fff;
-          overflow: hidden;
 
-          background:
-            radial-gradient(60% 60% at 50% 40%, rgba(0,0,0,0) 0%, rgba(0,0,0,0.4) 60%, #000 100%),
-            linear-gradient(180deg, #020302 0%, #000000 100%);
-        }
+        #root, .App {
+  background: #000;
+}
 
-       /* LEFT BEAM */
+    .about-hero {
+  position: relative;
+  width: 100%;
+  min-height: 820px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  font-family: "Inter", sans-serif;
+  color: #fff;
+  overflow: hidden;
+   margin-bottom: 40px;
+
+    /* 👇 THIS creates the curved bottom */
+    
+  border-bottom-left-radius: 40px;
+  border-bottom-right-radius: 40px;
+
+  background:
+    radial-gradient(ellipse 80% 60% at 50% 100%, rgba(0,0,0,0) 0%, rgba(0,0,0,0.6) 50%, #000 100%),
+    radial-gradient(ellipse 60% 50% at 50% 50%, rgba(0,0,0,0.5) 0%, transparent 100%),
+    linear-gradient(180deg, #020302 0%, #000000 100%);
+}
+
+
+
 .hero-beam-left {
   position: absolute;
-  bottom: -50px;
-  left: -5%;
-  width: 300px;
-  height: 600px;
-  transform: rotate(35deg);
-  background: linear-gradient(
-    180deg,
-    transparent 0%,
-    rgba(154, 255, 46, 0.8) 40%,
-    rgba(154, 255, 46, 0.4) 60%,
-    transparent 100%
+  bottom: 0;
+  left: 0;
+  width: 45%;
+  height: 100%;
+  background: radial-gradient(
+    ellipse 89% 75% at 13% 100%,
+    #9aff2e 0%,
+    rgba(154, 255, 46, 0.5) 25%,
+    rgba(154, 255, 46, 0.2) 52%,
+    transparent 70%
   );
-  filter: blur(40px);
-  opacity: 0.7;
   z-index: 0;
+  pointer-events: none;
 }
 
-/* RIGHT BEAM */
+
+
+
 .hero-beam-right {
   position: absolute;
-  bottom: -50px;
-  right: -5%;
-  width: 300px;
-  height: 600px;
-  transform: rotate(-85deg);
-  background: linear-gradient(
-    180deg,
-    transparent 0%,
-    rgba(154, 255, 46, 0.8) 40%,
-    rgba(154, 255, 46, 0.4) 60%,
-    transparent 100%
+  bottom: 0;
+  right: 0;
+  width: 45%;
+  height: 100%;
+  background: radial-gradient(
+    ellipse 89% 75% at 87% 100%,
+    #9aff2e 0%,
+    rgba(154, 255, 46, 0.5) 25%,
+    rgba(154, 255, 46, 0.2) 52%,
+    transparent 70%
   );
-  filter: blur(40px);
-  opacity: 0.7;
   z-index: 0;
+  pointer-events: none;
 }
 
-       
 
-        .about-hero::before {
-          left: -10%;
-        }
 
-        .about-hero::after {
-          right: -10%;
-        }
+.hero-glow {
+  position: absolute;
+  top: -20%;
+  width: 50%;
+  height: 50%;
+  pointer-events: none;
+  z-index: 1;
+  filter: blur(80px);
+  opacity: 0.4;
+}
+
+/* 🔹 TOP LEFT */
+.hero-glow-left {
+  left: -10%;
+  background: radial-gradient(
+    circle at 30% 30%,
+    #9aff2e 30%,
+    rgba(154, 255, 46, 0.45) 40%,
+    rgba(154, 255, 46, 0.25) 30%,
+    transparent 60%
+  );
+}
+
+/* 🔹 TOP RIGHT */
+.hero-glow-right {
+  right: -10%;
+  background: radial-gradient(
+    circle at 70% 30%,
+    #9aff2e 30%,
+    rgba(154, 255, 46, 0.45) 40%,
+    rgba(154, 255, 46, 0.25) 30%,
+    transparent 60%
+  );
+}
+
+
+
+
 
         .about-hero__inner {
           position: relative;
@@ -122,6 +170,7 @@ const About = () => {
           max-width: 1265px;
           margin: 0 auto;
           text-align: center;
+          margin-top: 40px;
         }
 
         .about-hero__title {
