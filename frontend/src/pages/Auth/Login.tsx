@@ -133,7 +133,7 @@ const Login = () => {
           <AuthForm>
             <form className="flex flex-col gap-4" onSubmit={handleContinue}>
               <input
-                className="bg-[#050505] border border-[#2a2a2a] p-3.5 rounded-xl text-white w-full focus:outline-none focus:border-[#9cff2e]"
+                className="bg-[#050505] border border-[#2a2a2a] p-3.5 rounded-xl text-white w-full focus:outline-none focus:border-[#9aff2e]"
                 placeholder="Enter company mail id"
                 type="email"
                 value={email}
@@ -143,7 +143,7 @@ const Login = () => {
 
               <button
                 type="submit"
-                className="w-full bg-[#9cff2e] text-black p-3.5 rounded-xl font-medium hover:bg-[#85e600] transition"
+                className="w-full bg-[#9aff2e] text-black p-3.5 rounded-xl font-medium hover:bg-[#85e600] transition"
               >
                 Continue
               </button>
@@ -226,7 +226,7 @@ const Login = () => {
 
             <button
               type="button"
-              className="flex-1 bg-[#9cff2e] text-black p-3.5 rounded-xl hover:bg-[#85e600] transition"
+              className="flex-1 bg-[#9aff2e] text-black p-3.5 rounded-xl hover:bg-[#85e600] transition"
               onClick={handleVerify}
             >
               Continue
