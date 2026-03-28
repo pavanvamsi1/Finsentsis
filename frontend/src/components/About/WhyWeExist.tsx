@@ -50,7 +50,7 @@ const WhyWeExist = () => {
         .why {
           position: relative;
           width: 100%;
-          min-height: 720px;
+          min-height: 600px;
           background: #000;
           overflow: hidden;
           color: #fff;
@@ -83,7 +83,7 @@ const WhyWeExist = () => {
   left: 50%;
   transform: translateX(-50%);
   width: 2400px;
-  height: 550px;
+  height: 450px;
   background: radial-gradient(
     ellipse at center bottom,
     #9AFF2E 0%,
@@ -142,7 +142,7 @@ const WhyWeExist = () => {
           z-index: 5;
           max-width: 1300px;
           margin: 0 auto;
-          padding: 100px 20px 120px;
+          padding: 75px 20px 120px;
           text-align: center;
           font-family: "Inter", sans-serif;
         }
