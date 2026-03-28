@@ -107,7 +107,7 @@ const Requestademo = () => {
 
           <button
             type="submit"
-            className="w-full bg-[#9cff2e] text-black p-3.5 rounded-xl hover:bg-[#85e600]"
+            className="w-full bg-[#9aff2e] text-black p-3.5 rounded-xl hover:bg-[#85e600]"
           >
             Request a Demo
           </button>
