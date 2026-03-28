@@ -50,9 +50,7 @@ const About = () => {
         @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap");
 
 
-        #root, .App {
-  background: #000;
-}
+
 
     .about-hero {
   position: relative;
@@ -83,14 +81,14 @@ const About = () => {
   position: absolute;
   bottom: 0;
   left: 0;
-  width: 45%;
-  height: 100%;
+  width: 35%;
+  height: 90%;
   background: radial-gradient(
-    ellipse 89% 75% at 13% 100%,
+    ellipse 100% 75% at 13% 100%,
     #9aff2e 0%,
     rgba(154, 255, 46, 0.5) 25%,
-    rgba(154, 255, 46, 0.2) 52%,
-    transparent 70%
+    rgba(154, 255, 46, 0.2) 50%,
+    transparent 80%
   );
   z-index: 0;
   pointer-events: none;
@@ -103,14 +101,14 @@ const About = () => {
   position: absolute;
   bottom: 0;
   right: 0;
-  width: 45%;
-  height: 100%;
+  width: 35%;
+  height: 90%;
   background: radial-gradient(
-    ellipse 89% 75% at 87% 100%,
+    ellipse 100% 75% at 87% 100%,
     #9aff2e 0%,
     rgba(154, 255, 46, 0.5) 25%,
-    rgba(154, 255, 46, 0.2) 52%,
-    transparent 70%
+    rgba(154, 255, 46, 0.2) 50%,
+    transparent 80%
   );
   z-index: 0;
   pointer-events: none;
@@ -121,8 +119,8 @@ const About = () => {
 .hero-glow {
   position: absolute;
   top: -20%;
-  width: 50%;
-  height: 50%;
+  width: 45%;
+  height: 45%;
   pointer-events: none;
   z-index: 1;
   filter: blur(80px);
@@ -133,8 +131,8 @@ const About = () => {
 .hero-glow-left {
   left: -10%;
   background: radial-gradient(
-    circle at 30% 30%,
-    #9aff2e 30%,
+    circle at 10% 10%,
+    #9aff2e 20%,
     rgba(154, 255, 46, 0.45) 40%,
     rgba(154, 255, 46, 0.25) 30%,
     transparent 60%
@@ -143,10 +141,10 @@ const About = () => {
 
 /* 🔹 TOP RIGHT */
 .hero-glow-right {
-  right: -10%;
+  right: -35%;
   background: radial-gradient(
-    circle at 70% 30%,
-    #9aff2e 30%,
+    circle at 10% 10%,
+    #9aff2e 20%,
     rgba(154, 255, 46, 0.45) 40%,
     rgba(154, 255, 46, 0.25) 30%,
     transparent 60%
