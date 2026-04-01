@@ -90,7 +90,7 @@ export default function CTA() {
 
 .glow-layer2{
   filter: blur(280px);
-  opacity:0.55;
+  opacity:0;
 }
 
 .glow-layer3{
@@ -121,10 +121,10 @@ export default function CTA() {
 /* RIGHT beams */
 
 .glow-right.glow-layer1 { bottom:-120px; right:-380px; transform:rotate(-82deg) scaleX(-1); }
-.glow-right.glow-layer2 { bottom:-150px; right:-340px; transform:rotate(22deg) scaleX(-1); }
-.glow-right.glow-layer3 { bottom:-180px; right:-300px; transform:rotate(22deg) scaleX(-1); }
-.glow-right.glow-layer4 { bottom:-210px; right:-260px; transform:rotate(22deg) scaleX(-1); }
-.glow-right.glow-layer5 { bottom:-240px; right:-220px; transform:rotate(22deg) scaleX(-1); }
+.glow-right.glow-layer2 { bottom:-150px; right:-340px; transform:rotate(-82deg) scaleX(-1); }
+.glow-right.glow-layer3 { bottom:-180px; right:-300px; transform:rotate(-82deg) scaleX(-1); }
+.glow-right.glow-layer4 { bottom:-210px; right:-260px; transform:rotate(-82deg) scaleX(-1); }
+.glow-right.glow-layer5 { bottom:-240px; right:-220px; transform:rotate(-82deg) scaleX(-1); }
 
 
 
