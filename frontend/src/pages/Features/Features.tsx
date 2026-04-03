@@ -292,7 +292,8 @@ export default function Features() {
           padding: 0 37px 0;
           display: flex; flex-direction: column; gap: 20px;
           position: relative;   /* 🔥 ADD */
-  z-index: 2;           /* 🔥 ADD */
+  z-index: 2;    
+  background: #111111;       /* 🔥 ADD */
 }
         }
           
