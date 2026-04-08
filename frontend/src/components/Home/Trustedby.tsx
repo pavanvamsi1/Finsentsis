@@ -4,72 +4,80 @@ import React from "react";
 import img60 from "../../assets/Home/60.png";
 import img80 from "../../assets/Home/80.png";
 import img190 from "../../assets/Home/190.png";
+import MiniDashboard from "../../assets/Home/Mini Dashboard.png";
 
 const TrustedBy: React.FC = () => {
   return (
-    <section className="trusted-section">
+    <>
 
-      {/* ── PILL ── */}
-      <div className="trusted-pill">
-        <div className="sec-pill">
-          Enterprise-grade security · Encryption at rest & in transit · Role-based access controls
-        </div>
-      </div>
+      {/* ✅ WRAPPER ADDED */}
+      <div className="trusted-wrapper">
 
-      {/* ── HEADER ── */}
-      <div className="trusted-header">
-        <h2 className="trusted-heading">
-          Trusted by Leading Enterprises
-        </h2>
-
-        <p className="trusted-text">
-          From tax and payroll laws to ESG regulations and labor standards everything runs autonomously through the Finsentsis engine.
-        </p>
-      </div>
-
-      {/* ── STATS ── */}
-      <div className="trusted-stats">
-        {[
-          {
-            label: "Reduce\nCompliance\nCosts",
-            img: img60,
-            width: "381.13px",
-  height: "221.22px"
-          },
-          {
-            label: "Manual\nwork\neliminated",
-            img: img80,
-            width: "380px",
-            height: "221.22px"
-          },
-          {
-            label: "Countries\nsupported",
-            img: img190,
-            width: "340px",
-            height: "221.22px"
-          },
-        ].map(({ label, img, width,height }) => (
-          <div key={label} className="stat-card">
-            <span className="stat-label">{label}</span>
-
-            {/* ✅ IMAGE INSTEAD OF NUMBER */}
-            <img
-              src={img}
-              alt="stat"
-              style={{ width, height , objectFit: "contain" }}
-              
-            />
+        {/* ── PILL ── */}
+        <div className="trusted-pill">
+          <div className="sec-pill">
+            Enterprise-grade security · Encryption at rest & in transit · Role-based access controls
           </div>
-        ))}
+        </div>
+
+        {/* ── HEADER ── */}
+        <div className="trusted-header">
+          <h2 className="trusted-heading">
+            Trusted by Leading Enterprises
+          </h2>
+
+          <p className="trusted-text">
+            From tax and payroll laws to ESG regulations and labor standards everything runs autonomously through the Finsentsis engine.
+          </p>
+        </div>
+
+        {/* ── STATS ── */}
+        <div className="trusted-stats">
+          {[
+            {
+              label: "Reduce\nCompliance\nCosts",
+              img: img60,
+              width: "381.13px",
+              height: "221.22px"
+            },
+            {
+              label: "Manual\nwork\neliminated",
+              img: img80,
+              width: "380px",
+              height: "221.22px"
+            },
+            {
+              label: "Countries\nsupported",
+              img: img190,
+              width: "340px",
+              height: "221.22px"
+            },
+          ].map(({ label, img, width, height }) => (
+            <div key={label} className="stat-card">
+              <span className="stat-label">{label}</span>
+
+              <img
+                src={img}
+                alt="stat"
+                style={{ width, height, objectFit: "contain" }}
+              />
+            </div>
+          ))}
+        </div>
+
+      </div>
+
+      {/* ✅ DASHBOARD (SEPARATE FROM FLOW) */}
+      <div className="trusted-dashboard">
+        <img src={MiniDashboard} alt="Dashboard Preview" />
       </div>
 
       {/* ── STYLES ── */}
       <style>{`
-        .trusted-section {
-          padding: 60px 60px 80px;
-          background: #111111;
-          position: relative;
-          overflow: hidden;
+
+        /* ✅ WRAPPER (MAIN FIX) */
+        .trusted-wrapper {
+          margin-top: 90px;   /* 👈 moves badge + content down */
         }
 
         .trusted-pill {
@@ -104,7 +112,7 @@ const TrustedBy: React.FC = () => {
         .trusted-heading {
           font-family: 'Inter', sans-serif;
           font-weight: 500;
-          font-size: 55px;
+          font-size: 50px;
           line-height: 120%;
           color: #FFFFFF;
           text-align: left;
@@ -117,7 +125,6 @@ const TrustedBy: React.FC = () => {
           font-weight: 400;
           font-size: 20px;
           line-height: 140%;
-          letter-spacing: 0;
           color: #999999;
           max-width: 750px;
           text-align: left;
@@ -129,7 +136,9 @@ const TrustedBy: React.FC = () => {
           grid-template-columns: repeat(3, 1fr);
           gap: 16px;
           max-width: 1400px;
-          margin: 0 auto 0;
+          margin: 0 auto;
+          position: relative;
+          z-index: 2;
         }
 
         .stat-card {
@@ -142,7 +151,6 @@ const TrustedBy: React.FC = () => {
           justify-content: space-between;
           align-items: center;
           border: 1.6px solid #383838;
-          transition: transform 0.3s ease, border 0.3s ease;
         }
 
         .stat-label {
@@ -150,13 +158,46 @@ const TrustedBy: React.FC = () => {
           font-weight: 500;
           font-size: 30.27px;
           line-height: 120%;
-          letter-spacing: 0;
           color: #999999;
           max-width: 167px;
           white-space: pre-line;
         }
+
+        /* 🔥 DASHBOARD (FIXED POSITION, DOES NOT AFFECT CTA) */
+        .trusted-dashboard {
+          position: absolute;
+          top: 3480px;     /* 👈 adjust vertical */
+          right: -170px;
+          width: 100%;
+
+          display: flex;
+          justify-content: center;
+
+          pointer-events: none;
+        }
+
+
+        
+      
+
+        .trusted-dashboard img {
+          width: 80%;
+          max-width: 800px;
+          height: auto;
+
+          border-radius: 20px;
+
+          margin-left: 400px; /* 👈 right shift */
+
+          -webkit-mask-image: linear-gradient(
+            to bottom,
+            black 40%,
+            transparent 95%
+          );
+        }
+
       `}</style>
-    </section>
+    </>
   );
 };
 
