@@ -9,9 +9,8 @@ import WhyChoose        from "../../components/Home/Whychoose";
 import TrustedBy        from "../../components/Home/Trustedby";
 
 
-import d1 from "../../assets/Home/d1.png";
-import d2 from "../../assets/Home/d2.png";
-import d3 from "../../assets/Home/d3.png";
+import Dashboard from "../../assets/Home/Dashboard.png";
+
 
 
 
@@ -55,13 +54,11 @@ export default function Homepage() {
 
 
 
-          {/* HERO IMAGES (FIGMA PERFECT) */}
+          {/* HERO IMAGE (FIGMA PERFECT) */}
 
 
 <div className="hero-images">
-  <img src={d1} alt="d1" className="img-d1" />
-  <img src={d2} alt="d2" className="img-d2" />
-  <img src={d3} alt="d3" className="img-d3" />
+    <img src={Dashboard} alt="Dashboard" className="img-dashboard" />
 </div>
       
       </section>
@@ -142,6 +139,8 @@ export default function Homepage() {
         ::-webkit-scrollbar-track { background: #111111; }
         ::-webkit-scrollbar-thumb { background: #2a2a2a; }
 
+        
+
         /* ── Page ── */
         .page {
           background: #111111;
@@ -182,9 +181,9 @@ export default function Homepage() {
 
   background: linear-gradient(
     to bottom,
-    rgba(255,255,255,0.35),
-    rgba(255,255,255,0.18),
-    rgba(255,255,255,0.05),
+    rgba(255,255,255,0.5),
+    rgba(255,255,255,0.4),
+    rgba(255,255,255,0.3),
     transparent
   );
 
@@ -199,10 +198,10 @@ export default function Homepage() {
 }
 
 /* Rays positions */
-.ray1 { --left: 40%; --angle: 30deg; }
-.ray2 { --left: 70%; --angle: 30deg; }
-.ray3 { --left: 100%; --angle: 30deg; }
-.ray4 { --left: 10%; --angle: 30deg; }
+.ray1 { --left: 55%; --angle: 30deg; height: 1050px;  opacity: 0.9; }
+.ray2 { --left: 75%; --angle: 30deg; height: 900px;  opacity: 0.8; }
+.ray3 { --left: 90%; --angle: 25deg; height: 700px;  opacity: 0.8; }
+.ray4 { --left: 35%; --angle: 25deg; height: 800px;  opacity: 0.5; }
 
 /* Fade bottom */
 .sun-rays {
@@ -336,75 +335,31 @@ export default function Homepage() {
 
 /* ── HERO IMAGES (LIKE YOUR DESIGN) ── */
 .hero-images {
-  position: relative;
   width: 100%;
-  max-width: 1400px;
-  height: 420px;
-  margin-top: 80px;
-  z-index: 1;
-
-  /* 🔥 FADE INTO BACKGROUND */
-  -webkit-mask-image: linear-gradient(
-    to bottom,
-    rgba(0,0,0,1) 40%,
-    rgba(0,0,0,0.8) 60%,
-    rgba(0,0,0,0.3) 80%,
-    transparent 100%
-  );
-
-  mask-image: linear-gradient(
-    to bottom,
-    rgba(0,0,0,1) 40%,
-    rgba(0,0,0,0.8) 60%,
-    rgba(0,0,0,0.3) 80%,
-    transparent 100%
-  );
+  display: flex;
+  justify-content: center;
+  transform: translateY(-160px);
 }
 
-/* COMMON IMAGE STYLE */
-.hero-images img {
-  position: absolute;
-  width: 420px;
+.img-dashboard {
+  width: 100vw;     /* full screen width */
+  max-width: none;  /* remove cap */
   height: auto;
-  border-radius: 40px;
-  object-fit: cover;
+  
+  border-radius: 16px;
 
-  opacity: 0.9;
-  filter: brightness(0.7);
-
-  transition: transform 0.4s ease;
-}
-
-/* d1 LEFT */
-.img-d1 {
-  left: -50px;
-  top: 80px;
-  transform: rotate(0deg);
-  z-index: 1;
-}
-
-/* d2 CENTER (MAIN) */
-.img-d2 {
-  left: 50%;
-  top: 0;
-  transform: translateX(-50%);
-  z-index: 3;
-
-  filter: brightness(0.9);
-}
-
-/* d3 RIGHT */
-.img-d3 {
-  right: -180px;
-  top: 80px;
-  transform: rotate(8deg);
-  z-index: 1;
+-webkit-mask-image: linear-gradient(
+    to bottom,
+    transparent 10%,   /* 👈 fade from top */
+    black 20%,       /* fully visible */
+    black 70%,       /* fully visible */
+    transparent 100% /* fade bottom */
+  );
 }
 
 
 
 
-       
 
         /* ── Intro Section ── */
     
@@ -419,7 +374,7 @@ export default function Homepage() {
   color: #EAEAEA;
 
   max-width: 1400px;           /* from Figma */
-  margin: 140px 50px auto ;
+  margin: 0 50px auto ;
 
   text-align: left;            /* IMPORTANT */
 }
@@ -443,7 +398,7 @@ export default function Homepage() {
 }
 
 .cta-content{
-  margin-top:60px;
+  margin-top:80px;
   position:relative;
   z-index:1;
 }
@@ -632,6 +587,10 @@ export default function Homepage() {
   border-color: rgba(255,255,255,0.4); 
   transform: translateY(-1px); 
 }
+
+
+
+
 
    
         /* ── Responsive ── */
