@@ -51,7 +51,7 @@ const WhyChoose = () => (
 
     <style>{`
       .why-section {
-        padding: 30px 60px 150px;
+        padding: 20px 60px 150px;
         background: #111111;
         position: relative;
         overflow: hidden;
@@ -162,13 +162,11 @@ const WhyChoose = () => (
 
 .why-card-top {
   width: 100%;
-  height: 276px; /* exact from figma */
+  height: 276px;
 
   display: flex;
   align-items: center;
   justify-content: center;
-
-  padding: 20px;
 
   overflow: hidden;
 }
@@ -176,36 +174,35 @@ const WhyChoose = () => (
 
 
 
+
+
 /* 🔥 CARD 1 — LEFT HEAVY */
 
 .card-reducecompliancecosts img {
-  width: 140%;
-  left: -20%;
-  top: 10%;
+  width: 100%;
+  
  
 }
 
 /* 🔥 CARD 2 — CENTER CLEAN */
 .card-minimizerisk img {
-  width: 150%;
-  left: 50%;
-  top: 50%;
+  width: 100%;
+
  
 }
 
 /* 🔥 CARD 3 — ZOOMED GLOW */
 .card-gainvisibility img {
-  width: 120%;
-  left: 50%;
-  top: 40%;
+  width: 100%;
+ transform: translateY(5px);
+ 
  
 }
 
 /* 🔥 CARD 4 — RIGHT SHIFTED */
 .card-scaleglobally img {
-  width: 130%;
-  right: -15%;
-  top: 15%;
+  width: 70%;
+ 
   
 }
 
@@ -214,7 +211,7 @@ const WhyChoose = () => (
      /* ── CARD BOTTOM (FIGMA EXACT) ── */
 .why-card-bottom {
   width: 347px;
-  height: 172px; /* exact */
+  height: 180px; /* exact */
 
   background: #1E1E1E;
 
@@ -243,7 +240,8 @@ const WhyChoose = () => (
 
   color: #FFFFFF;
 
-  margin-bottom: 32px;
+  margin-top: 10px;
+  margin-bottom: 28px;
 }
 
 
@@ -262,6 +260,9 @@ const WhyChoose = () => (
   width: 300px;       
   max-width: none; 
 }
+
+
+
 
 
     `}</style>
