@@ -48,7 +48,9 @@ export default function Homepage() {
             real-time intelligence and automation.
           </p>
 
-          <button className="btn-hero">Explore the OS ↗</button>
+          <Link to="/RequestaDemo" className="btn-hero">
+  Explore the OS ↗
+</Link>
         </div>
 
 
@@ -330,6 +332,10 @@ export default function Homepage() {
 60px rgba(0,0,0,0.5);
   transition: transform 0.4s ease, opacity 0.4s ease;
 }
+
+
+
+
 
 
 
