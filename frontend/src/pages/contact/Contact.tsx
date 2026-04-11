@@ -202,12 +202,12 @@ export default function Contact() {
 
 .glow-layer2{
   filter: blur(280px);
-  opacity:0.55;
+  opacity:0.25;
 }
 
 .glow-layer3{
   filter: blur(320px);
-  opacity:0.35;
+  opacity:0.15;
 }
 
 .glow-layer4{
@@ -217,7 +217,7 @@ export default function Contact() {
 
 .glow-layer5{
   filter: blur(200px);
-  opacity:0.15;
+  opacity:0;
 }
 
 /* LEFT */
