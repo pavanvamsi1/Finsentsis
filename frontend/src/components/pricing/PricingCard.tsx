@@ -1,6 +1,7 @@
 import React from "react";
 import PlanFeatureList from "./PlanFeatureList";
 import Finsentsis from "../../assets/logos/finsentsis.png";
+import { Link } from "react-router-dom";
 
 /**
  * Props for PricingCard component
@@ -66,13 +67,13 @@ const PricingCard: React.FC<PricingCardProps> = ({
         </div>
 
         {/* CTA Button */}
-        <button
-          className="mt-6 w-full rounded-lg bg-[#9AFF2E] py-2.5
-          text-sm font-medium text-black transition
-          hover:bg-[#9AFF2E]"
-        >
-          {buttonText}
-        </button>
+        <Link
+  to="/Requestademo"
+  className="mt-6 w-full block text-center rounded-lg bg-[#9AFF2E] py-2.5
+  text-sm font-medium text-black transition hover:bg-[#85e600]"
+>
+  {buttonText}
+</Link>
 
         {/* Feature list */}
         <PlanFeatureList features={features} />
