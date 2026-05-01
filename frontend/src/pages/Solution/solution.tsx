@@ -86,7 +86,7 @@ export default function SolutionPage() {
   </p>
 
   <div className="cta-buttons">
-    <a href="#" className="btn-primary">Start free trial ↗</a>
+    
     <a href="/Requestademo" className="btn-secondary">
       Schedule Demo ↗
     </a>
@@ -378,15 +378,7 @@ export default function SolutionPage() {
   flex-wrap: wrap;
 }
 
-.btn-primary {
-  padding: 12px 24px;
-  border-radius: 999px;
-  background: #9AFF2E;
-  color: #0a0a0a;
-  font-size: 14px;
-  font-weight: 600;
-  text-decoration: none;
-}
+
 
 .btn-secondary {
   padding: 12px 24px;
