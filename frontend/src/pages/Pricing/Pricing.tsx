@@ -12,7 +12,7 @@ const Pricing: React.FC = () => {
       description: "For SMBs and small teams using basic compliance automation",
       price: "$499",
       billingNote: "/month or $4,990/year (save 2 months)",
-      buttonText: "Start Free Trial",
+      buttonText: "Schedule Demo",
       features: [
         "Core regulatory intelligence",
         "Audit-ready reporting",
@@ -28,7 +28,7 @@ const Pricing: React.FC = () => {
         "For mid-market enterprises with multi-domain and multi-country needs",
       price: "$2,499",
       billingNote: "/month or $24,990/year",
-      buttonText: "Start Free Trial",
+      buttonText: "Schedule Demo",
       highlighted: true,
       features: [
         "Everything in Essentials",
@@ -127,9 +127,7 @@ const Pricing: React.FC = () => {
             </p>
 
             <div className="cta-buttons">
-              <a href="#" className="btn-primary">
-                Start free trial ↗︎
-              </a>
+              
 
               <Link to="/Requestademo" className="btn-secondary">
                 Schedule Demo ↗
@@ -324,14 +322,7 @@ width: 1500px
   flex-wrap:wrap;
 }
 
-.btn-primary{
-  padding:12px 24px;
-  border-radius:999px;
-  background:#9AFF2E;
-  color:#0a0a0a;
-  font-weight:600;
-  text-decoration:none;
-}
+
 
 .btn-secondary{
   padding:12px 24px;
