@@ -40,9 +40,6 @@ const Requestademo = () => {
       badge="Create your Finsentsis account"
       title="Sign up account"
       subtitle=""
-      bottomText="Already have account?"
-      bottomLink="/login"
-      bottomLinkText="Log In"
     >
       <AuthTabs />
 
