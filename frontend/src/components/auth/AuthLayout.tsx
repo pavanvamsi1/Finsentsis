@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+
 import finsentsisLogo from "../../assets/logos/finsentsis.png";
 
 type Props = {
@@ -6,9 +6,7 @@ type Props = {
   title: string;
   subtitle: string;
   children: React.ReactNode;
-  bottomText?: string;
-  bottomLink?: string;
-  bottomLinkText?: string;
+  
 };
 
 const AuthLayout = ({
@@ -16,9 +14,7 @@ const AuthLayout = ({
   title,
   subtitle,
   children,
-  bottomText,
-  bottomLink,
-  bottomLinkText,
+  
 }: Props) => {
   return (
     <div className="min-h-screen flex items-center justify-center p-5 bg-[radial-gradient(circle_at_center,#3a4042_0%,#0b0b0b_70%)]">
@@ -46,16 +42,7 @@ const AuthLayout = ({
 
         {children}
 
-        {bottomText && (
-          <p className="mt-7 text-xs text-gray-500">
-            {bottomText}{" "}
-            {bottomLink && (
-              <Link to={bottomLink} className="underline hover:text-white">
-                {bottomLinkText}
-              </Link>
-            )}
-          </p>
-        )}
+        
       </div>
     </div>
   );
