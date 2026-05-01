@@ -80,9 +80,7 @@ export default function Contact() {
 
             <div className="cta-buttons">
 
-              <a href="#" className="btn-primary">
-                Start free trial ↗︎
-              </a>
+              
 
               <Link to="/Requestademo" className="btn-secondary">
                 Schedule Demo ↗
@@ -274,14 +272,7 @@ width: 1130px
   flex-wrap:wrap;
 }
 
-.btn-primary{
-  padding:12px 24px;
-  border-radius:999px;
-  background:#9AFF2E;
-  color:#0a0a0a;
-  font-weight:600;
-  text-decoration:none;
-}
+
 
 .btn-secondary{
   padding:12px 24px;
