@@ -2,7 +2,6 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { AuthProvider } from "./context/AuthProvider";
 
 import Home from "./pages/Home/Home";
-import Login from "./pages/Auth/Login";
 import Requestademo from "./pages/Auth/Requestademo";
 import Pricing from "./pages/Pricing/Pricing";
 import Leadership from "./pages/Leadership/Leadership";
@@ -26,7 +25,6 @@ function App() {
         <Routes>
           {/* Public Routes */}
           <Route path="/" element={<Home />} />
-          <Route path="/login" element={<Login />} />
           <Route path="/Requestademo" element={<Requestademo />} />
           <Route path="/pricing" element={<Pricing />} />
           <Route path="/Leadership" element={<Leadership />} />
