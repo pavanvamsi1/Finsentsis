@@ -21,22 +21,6 @@ api.interceptors.request.use((config) => {
 });
 
 /*
-LOGIN API
-*/
-export const loginAPI = async (email: string) => {
-  const res = await api.post("/auth/login", { email });
-  return res.data;
-};
-
-/*
-VERIFY OTP API
-*/
-export const verifyOtpAPI = async (email: string, otp: string) => {
-  const res = await api.post("/auth/verify-otp", { email, otp });
-  return res.data;
-};
-
-/*
 REQUEST DEMO
 */
 export const requestDemoAPI = async (data: {
