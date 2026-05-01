@@ -12,11 +12,7 @@ import Solution from "./pages/Solution/solution";
 import About from "./pages/About/About";
 
 
-import ProtectedRoute from "./components/auth/ProtectedRoute";
 
-// Temporary dashboard components
-const AdminDashboard = () => <div>Admin Dashboard</div>;
-const EmployeeDashboard = () => <div>Employee Dashboard</div>;
 
 function App() {
   return (
@@ -35,24 +31,9 @@ function App() {
           <Route path="/about" element={<About />} />
           
 
-          {/* Protected Routes */}
-          <Route
-            path="/admin/dashboard"
-            element={
-              <ProtectedRoute allowedRoles={["ADMIN"]}>
-                <AdminDashboard />
-              </ProtectedRoute>
-            }
-          />
+         
 
-          <Route
-            path="/employee/dashboard"
-            element={
-              <ProtectedRoute allowedRoles={["EMPLOYEE"]}>
-                <EmployeeDashboard />
-              </ProtectedRoute>
-            }
-          />
+         
 
           {/* 404 */}
           <Route path="*" element={<h1>404 Not Found</h1>} />
