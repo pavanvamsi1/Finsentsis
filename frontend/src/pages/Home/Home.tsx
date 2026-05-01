@@ -110,7 +110,7 @@ export default function Homepage() {
   </p>
 
   <div className="cta-buttons">
-    <a href="#" className="btn-primary">Start free trial ↗</a>
+    
 
     <Link to="/Requestademo" className="btn-secondary">
       Schedule Demo ↗
@@ -550,27 +550,7 @@ export default function Homepage() {
   flex-wrap: wrap;
 }
 
-.btn-primary {
-  display: inline-flex; 
-  align-items: center; 
-  gap: 6px;
-  padding: 12px 24px; 
-  border-radius: 999px;
-  background: #9AFF2E; 
-  color: #0a0a0a;
-  font-family: 'DM Sans', sans-serif; 
-  font-size: 14px; 
-  font-weight: 600;
-  border: none; 
-  cursor: pointer; 
-  text-decoration: none;
-  transition: opacity 0.2s, transform 0.2s;
-}
 
-.btn-primary:hover { 
-  opacity: 0.88; 
-  transform: translateY(-1px); 
-}
 
 .btn-secondary {
   display: inline-flex; 
