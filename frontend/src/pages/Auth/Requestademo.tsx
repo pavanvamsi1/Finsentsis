@@ -1,45 +1,54 @@
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+
 import AuthLayout from "../../components/auth/AuthLayout";
 import AuthTabs from "../../components/auth/AuthTabs";
 import AuthForm from "../../components/auth/AuthForm";
 import { requestDemoAPI } from "../../library/api";
 
 const Requestademo = () => {
-  const navigate = useNavigate();
+  
 
   const [company, setCompany] = useState("");
   const [email, setEmail] = useState("");
   const [country, setCountry] = useState("");
   const [accepted, setAccepted] = useState(false);
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
+const handleSubmit = async (e: React.FormEvent) => {
+  e.preventDefault();
 
-    if (!accepted) {
-      alert("Please accept Terms & Conditions");
-      return;
-    }
+  if (!accepted) {
+    alert("Please accept Terms & Conditions");
+    return;
+  }
 
-    try {
-      await requestDemoAPI({
-        company,
-        email,
-        country,
-      });
+  try {
+    const res = await requestDemoAPI({
+      company,
+      email,
+      country,
+    });
 
-      navigate("/login");
+    // ✅ Show backend message
+    alert(res?.message || "✅ Successfully submitted!");
 
-    } catch {
-      alert("Demo request failed");
-    }
-  };
+    // ✅ Reset form
+    setCompany("");
+    setEmail("");
+    setCountry("");
+    setAccepted(false);
+
+  } catch (error) {
+    console.error(error);
+    alert("❌ Demo request failed");
+  }
+};
 
   return (
     <AuthLayout
       badge="Create your Finsentsis account"
       title="Sign up account"
       subtitle=""
+      
     >
       <AuthTabs />
 
